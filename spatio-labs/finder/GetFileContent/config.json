@@ -1,0 +1,16 @@
+{
+  "name": "Get File Content",
+  "description": "A capability that retrieves the content of a specified file.",
+  "entry_point": "main.zsh",
+  "organization": "spatio-labs",
+  "group": "finder",
+  "inputs": [
+    {
+      "name": "filePath",
+      "type": "string",
+      "required": true,
+      "description": "The absolute or relative path to the file."
+    }
+  ],
+  "output": "json"
+}

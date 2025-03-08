@@ -1,0 +1,9 @@
+{
+  "name": "Retrieve Remote File Info In Slack/",
+  "description": "To be determined",
+  "entry_point": "main.zsh",
+  "organization": "slack",
+  "group": "",
+  "inputs": [],
+  "output": "json"
+}

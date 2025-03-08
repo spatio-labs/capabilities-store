@@ -1,0 +1,9 @@
+{
+  "name": "Update An Existing Slack User Group/",
+  "description": "To be determined",
+  "entry_point": "main.zsh",
+  "organization": "slack",
+  "group": "",
+  "inputs": [],
+  "output": "json"
+}

@@ -1,0 +1,16 @@
+{
+  "name": "List Files and Contents",
+  "description": "Lists all files in a directory along with their contents.",
+  "entry_point": "main.zsh",
+  "organization": "spatio-labs",
+  "group": "finder",
+  "inputs": [
+    {
+      "name": "directoryPath",
+      "type": "string",
+      "required": true,
+      "description": "The path to the directory to list files and their contents from."
+    }
+  ],
+  "output": "json"
+}

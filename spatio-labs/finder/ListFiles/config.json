@@ -1,0 +1,16 @@
+{
+  "name": "List Files",
+  "description": "Lists all files in a given directory.",
+  "entry_point": "main.zsh",
+  "organization": "spatio-labs",
+  "group": "finder",
+  "inputs": [
+    {
+      "name": "directoryPath",
+      "type": "string",
+      "required": true,
+      "description": "The path to the directory to list files from."
+    }
+  ],
+  "output": "json"
+}

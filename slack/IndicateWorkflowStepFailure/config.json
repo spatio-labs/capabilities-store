@@ -1,0 +1,9 @@
+{
+  "name": "Indicate Workflow Step Failure/",
+  "description": "To be determined",
+  "entry_point": "main.zsh",
+  "organization": "slack",
+  "group": "",
+  "inputs": [],
+  "output": "json"
+}

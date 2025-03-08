@@ -1,0 +1,9 @@
+{
+  "name": "Set Channel Posting Permissions/",
+  "description": "To be determined",
+  "entry_point": "main.zsh",
+  "organization": "slack",
+  "group": "",
+  "inputs": [],
+  "output": "json"
+}

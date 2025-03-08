@@ -1,0 +1,9 @@
+{
+  "name": "Open AView For ASlack User/",
+  "description": "To be determined",
+  "entry_point": "main.zsh",
+  "organization": "slack",
+  "group": "",
+  "inputs": [],
+  "output": "json"
+}
