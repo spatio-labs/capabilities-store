@@ -1,0 +1,9 @@
+{
+  "name": "Get Attachment",
+  "description": "A capability that retrieves an attachment from a Gmail message.",
+  "entry_point": "main.zsh",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [],
+  "output": "json"
+}

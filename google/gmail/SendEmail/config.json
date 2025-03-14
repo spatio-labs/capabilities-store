@@ -1,0 +1,28 @@
+{
+  "name": "Send Email",
+  "description": "A capability that sends an email through Gmail.",
+  "entry_point": "main.zsh",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "recipientEmail",
+      "type": "string",
+      "required": true,
+      "description": "The recipient's email address."
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true,
+      "description": "The subject of the email."
+    },
+    {
+      "name": "body",
+      "type": "string",
+      "required": true,
+      "description": "The body of the email."
+    }
+  ],
+  "output": "json"
+}

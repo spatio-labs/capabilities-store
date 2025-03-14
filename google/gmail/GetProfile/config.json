@@ -1,0 +1,9 @@
+{
+  "name": "Get Profile",
+  "description": "A capability that retrieves the profile of the sender.",
+  "entry_point": "main.zsh",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [],
+  "output": "json"
+}

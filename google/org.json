@@ -1,0 +1,11 @@
+{
+  "name": "google",
+  "description": "Google's organization",
+  "groupsHaveSameCredentials": false,
+  "groups": [
+    {
+      "name": "gmail",
+      "description": "Google's Gmail service"
+    }
+  ]
+}
