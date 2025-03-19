@@ -4,6 +4,11 @@
   "entry_point": "main.zsh",
   "organization": "google",
   "group": "gmail",
+  "auth": {
+    "type": "oauth2",
+    "required": true,
+    "scopes": ["https://www.googleapis.com/auth/gmail.send"]
+  },
   "inputs": [
     {
       "name": "recipientEmail",

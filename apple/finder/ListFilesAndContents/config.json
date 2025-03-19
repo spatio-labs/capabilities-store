@@ -12,5 +12,14 @@
       "description": "The path to the directory to list files and their contents from."
     }
   ],
-  "output": "json"
+  "output": {
+    "files": [
+      {
+        "name": "string",
+        "size": "number",
+        "lastModified": "string",
+        "contents": "string"
+      }
+    ]
+  }
 }
