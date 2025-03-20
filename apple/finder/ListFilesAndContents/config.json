@@ -2,7 +2,7 @@
   "name": "List Files and Contents",
   "description": "Lists all files in a directory along with their contents.",
   "entry_point": "main.zsh",
-  "organization": "general",
+  "organization": "apple",
   "group": "finder",
   "inputs": [
     {
@@ -12,14 +12,5 @@
       "description": "The path to the directory to list files and their contents from."
     }
   ],
-  "output": {
-    "files": [
-      {
-        "name": "string",
-        "size": "number",
-        "lastModified": "string",
-        "contents": "string"
-      }
-    ]
-  }
+  "output": "json"
 }

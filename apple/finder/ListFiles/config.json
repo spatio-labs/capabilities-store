@@ -2,7 +2,7 @@
   "name": "List Files",
   "description": "Lists all files in a given directory.",
   "entry_point": "main.zsh",
-  "organization": "general",
+  "organization": "apple",
   "group": "finder",
   "inputs": [
     {

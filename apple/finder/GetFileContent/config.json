@@ -2,19 +2,16 @@
   "name": "Get File Content",
   "description": "A capability that retrieves the content of a specified file.",
   "entry_point": "main.zsh",
-  "organization": "general",
+  "organization": "apple",
   "group": "finder",
   "inputs": [
     {
       "name": "filePath",
       "type": "string",
       "required": true,
+      "defaultValue": "",
       "description": "The absolute or relative path to the file."
     }
   ],
-  "output": {
-    "content": "string",
-    "size": "number",
-    "lastModified": "string"
-  }
+  "output": "json"
 }
