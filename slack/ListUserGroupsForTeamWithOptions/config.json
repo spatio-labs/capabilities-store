@@ -1,9 +1,0 @@
-{
-  "name": "List User Groups For Team With Options/",
-  "description": "To be determined",
-  "entry_point": "main.zsh",
-  "organization": "slack",
-  "group": "",
-  "inputs": [],
-  "output": "json"
-}

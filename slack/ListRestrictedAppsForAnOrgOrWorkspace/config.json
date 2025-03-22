@@ -1,9 +1,0 @@
-{
-  "name": "List Restricted Apps For An Org Or Workspace/",
-  "description": "To be determined",
-  "entry_point": "main.zsh",
-  "organization": "slack",
-  "group": "",
-  "inputs": [],
-  "output": "json"
-}

@@ -1,9 +1,0 @@
-{
-  "name": "Checks Api Call And Returns Success Or Error/",
-  "description": "To be determined",
-  "entry_point": "main.zsh",
-  "organization": "slack",
-  "group": "",
-  "inputs": [],
-  "output": "json"
-}

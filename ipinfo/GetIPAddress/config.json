@@ -1,9 +1,0 @@
-{
-  "name": "Get IP Address",
-  "description": "A capability that retrieves the user's IP address.",
-  "entry_point": "main.zsh",
-  "organization": "ipinfo",
-  "group": "",
-  "inputs": [],
-  "output": "json"
-}

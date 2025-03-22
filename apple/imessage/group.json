@@ -1,0 +1,6 @@
+{
+  "name": "iMessage",
+  "description": "A group that encapsulates all things iMessage",
+  "organization": "apple",
+  "types": ["local"]
+}

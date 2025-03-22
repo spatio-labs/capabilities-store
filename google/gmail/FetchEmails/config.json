@@ -1,9 +1,0 @@
-{
-  "name": "Fetch Emails",
-  "description": "A capability that fetches a list of emails.",
-  "entry_point": "main.zsh",
-  "organization": "google",
-  "group": "gmail",
-  "inputs": [],
-  "output": "json"
-}
