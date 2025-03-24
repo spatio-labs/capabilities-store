@@ -1,0 +1,1087 @@
+{
+	"info": {
+		"_postman_id": "ea5d0605-d408-45e9-a065-797cb5bb876f",
+		"name": "Google Calendar API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26980744"
+	},
+	"item": [
+		{
+			"name": "ACL",
+			"item": [
+				{
+					"name": "List ACL rules",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get ACL rule",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl/{{ruleId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl",
+								"{{ruleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert ACL rule",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scope\": {\n    \"type\": \"user\",\n    \"value\": \"user@example.com\"\n  },\n  \"role\": \"reader\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update ACL rule (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role\": \"owner\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl/{{ruleId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl",
+								"{{ruleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch ACL rule",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"role\": \"reader\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl/{{ruleId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl",
+								"{{ruleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete ACL rule",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl/{{ruleId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl",
+								"{{ruleId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Watch ACL changes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{channelId}}\",\n  \"type\": \"web_hook\",\n  \"address\": \"https://yourserver.com/notifications\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/acl/watch",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"acl",
+								"watch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CalendarList",
+			"item": [
+				{
+					"name": "List calendars in user calendarList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{base_url}}/users/me/calendarList",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"users",
+								"me",
+								"calendarList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get calendar from user calendarList",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/users/me/calendarList/{{calendarId}}",
+							"path": [
+								"users",
+								"me",
+								"calendarList",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert calendar into user calendarList",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{calendarId}}\"\n}"
+						},
+						"url": {
+							"raw": "/users/me/calendarList",
+							"path": [
+								"users",
+								"me",
+								"calendarList"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update calendar in user calendarList (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"hidden\": true,\n  \"selected\": false\n}"
+						},
+						"url": {
+							"raw": "/users/me/calendarList/{{calendarId}}",
+							"path": [
+								"users",
+								"me",
+								"calendarList",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch calendar in user calendarList",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"colorId\": \"7\"\n}"
+						},
+						"url": {
+							"raw": "/users/me/calendarList/{{calendarId}}",
+							"path": [
+								"users",
+								"me",
+								"calendarList",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete calendar from user calendarList",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/users/me/calendarList/{{calendarId}}",
+							"path": [
+								"users",
+								"me",
+								"calendarList",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Watch calendarList changes",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{channelId}}\",\n  \"type\": \"web_hook\",\n  \"address\": \"https://yourserver.com/notifications\"\n}"
+						},
+						"url": {
+							"raw": "/users/me/calendarList/watch",
+							"path": [
+								"users",
+								"me",
+								"calendarList",
+								"watch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Calendars",
+			"item": [
+				{
+					"name": "Clear a primary calendar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/clear",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"clear"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete a secondary calendar",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get calendar metadata",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert a new secondary calendar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"New Secondary Calendar\"\n}"
+						},
+						"url": {
+							"raw": "/calendars",
+							"path": [
+								"calendars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update calendar metadata (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"Updated Calendar Title\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patch calendar metadata",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"timeZone\": \"America/New_York\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Channels",
+			"item": [
+				{
+					"name": "Stop channel",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{channelId}}\",\n  \"resourceId\": \"{{resourceId}}\"\n}"
+						},
+						"url": {
+							"raw": "/channels/stop",
+							"path": [
+								"channels",
+								"stop"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Colors",
+			"item": [
+				{
+					"name": "Get color definitions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/colors",
+							"path": [
+								"colors"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Events",
+			"item": [
+				{
+					"name": "List events",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Import event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"Imported Event\",\n  \"start\": {\n    \"dateTime\": \"2025-04-01T10:00:00-07:00\"\n  },\n  \"end\": {\n    \"dateTime\": \"2025-04-01T11:00:00-07:00\"\n  }\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/import",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"import"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"New Event\",\n  \"start\": { \"dateTime\": \"2025-04-01T10:00:00-07:00\" },\n  \"end\": { \"dateTime\": \"2025-04-01T11:00:00-07:00\" }\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Instances of recurring event",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}/instances",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}",
+								"instances"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Move event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}/move?destination={{destinationCalendarId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}",
+								"move"
+							],
+							"query": [
+								{
+									"key": "destination",
+									"value": "{{destinationCalendarId}}"
+								}
+							]
+						},
+						"description": "Moves an event to another calendar. Need a destination query param, e.g. ?destination={{AnotherCalendarId}}"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch event",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"description\": \"Changed partial fields via patch\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Quick Add event",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/quickAdd?text={{quickAddText}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"quickAdd"
+							],
+							"query": [
+								{
+									"key": "text",
+									"value": "{{quickAddText}}"
+								}
+							]
+						},
+						"description": "Creates an event based on a simple text string. E.g. text='Conference at 10am tomorrow' as query param."
+					},
+					"response": []
+				},
+				{
+					"name": "Update event (PUT)",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"summary\": \"Updated Entire Event via PUT\",\n  \"start\": { \"dateTime\": \"2025-04-01T12:00:00-07:00\" },\n  \"end\": { \"dateTime\": \"2025-04-01T13:00:00-07:00\" }\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete event",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/{{eventId}}",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"{{eventId}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Watch events",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{channelId}}\",\n  \"type\": \"web_hook\",\n  \"address\": \"https://yourserver.com/notifications\"\n}"
+						},
+						"url": {
+							"raw": "/calendars/{{calendarId}}/events/watch",
+							"path": [
+								"calendars",
+								"{{calendarId}}",
+								"events",
+								"watch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Freebusy",
+			"item": [
+				{
+					"name": "Query free/busy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"timeMin\": \"2025-04-01T00:00:00Z\",\n  \"timeMax\": \"2025-04-02T00:00:00Z\",\n  \"items\": [\n    { \"id\": \"{{calendarId}}\" }\n  ]\n}"
+						},
+						"url": {
+							"raw": "/freeBusy",
+							"path": [
+								"freeBusy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Settings",
+			"item": [
+				{
+					"name": "List all user settings",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/users/me/settings",
+							"path": [
+								"users",
+								"me",
+								"settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get single user setting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "/users/me/settings/{{settingId}}",
+							"path": [
+								"users",
+								"me",
+								"settings",
+								"{{settingId}}"
+							]
+						},
+						"description": "Replace {{settingId}} with an actual setting key, e.g. 'locale', 'timezone', etc."
+					},
+					"response": []
+				},
+				{
+					"name": "Watch settings resources",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{Google_API_Token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": \"{{channelId}}\",\n  \"type\": \"web_hook\",\n  \"address\": \"https://yourserver.com/notifications\"\n}"
+						},
+						"url": {
+							"raw": "/users/me/settings/watch",
+							"path": [
+								"users",
+								"me",
+								"settings",
+								"watch"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "",
+			"type": "default"
+		},
+		{
+			"key": "calendarId",
+			"value": "matthew@spatiolabs.org",
+			"type": "default"
+		},
+		{
+			"key": "ruleId",
+			"value": "user:matthew@spatiolabs.org",
+			"type": "default"
+		},
+		{
+			"key": "eventId",
+			"value": "4k16ovgo604pqpura1d10k8rg1",
+			"type": "default"
+		}
+	]
+}
