@@ -13,5 +13,12 @@
       "description": "The path to the directory to list files from."
     }
   ],
-  "output": "json"
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
 }
