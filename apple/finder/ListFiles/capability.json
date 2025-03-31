@@ -2,6 +2,13 @@
   "type": "local",
   "name": "List Files",
   "description": "Lists all files in a given directory.",
+  "categories": [
+    "File System"
+  ],
+  "tags": [
+    "Finder",
+    "Files"
+  ],
   "entry_point": "main.zsh",
   "organization": "apple",
   "group": "finder",

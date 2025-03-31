@@ -1,0 +1,63 @@
+{
+  "type": "local",
+  "name": "Extract Web Metadata",
+  "description": "Extracts metadata from web pages including title, description, and keywords.",
+  "categories": [
+    "Web Search"
+  ],
+  "tags": [
+    "Web Search",
+    "Metadata Extraction"
+  ],
+  "entry_point": "spatio_search_cli",
+  "organization": "spatio",
+  "group": "web-search",
+  "inputs": [
+    {
+      "name": "query",
+      "type": "string",
+      "required": true,
+      "description": "The URL or search query to extract metadata from."
+    },
+    {
+      "name": "num",
+      "type": "integer",
+      "required": false,
+      "description": "Number of search results to return (default: 10)"
+    },
+    {
+      "name": "timeout",
+      "type": "integer",
+      "required": false,
+      "description": "Timeout in seconds for the search (default: 30)"
+    },
+    {
+      "name": "pretty",
+      "type": "boolean",
+      "required": false,
+      "description": "Pretty print the JSON output"
+    },
+    {
+      "name": "engine",
+      "type": "string",
+      "required": false,
+      "default": "google",
+      "description": "Search engine to use (default: google)"
+    },
+    {
+      "name": "metadata",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Include metadata from search results (always true for this capability)"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
