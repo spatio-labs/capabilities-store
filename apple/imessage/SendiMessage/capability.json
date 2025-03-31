@@ -20,7 +20,11 @@
     }
   ],
   "output": {
-    "status": "string",
-    "recipient": "string"
+    "status": {
+      "type": "string"
+    },
+    "recipient": {
+      "type": "string"
+    }
   }
 }

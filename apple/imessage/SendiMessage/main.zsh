@@ -4,15 +4,16 @@
 RECIPIENT_PHONE="$1"
 MESSAGE="$2"
 
-echo "Sending iMessage to $RECIPIENT_PHONE..."
-
-osascript <<EOF
+# Run the AppleScript to send the message (without the "Sending iMessage" message)
+RESULT=$(osascript <<EOF
 tell application "Messages"
     set targetService to 1st service whose service type = iMessage
     set targetBuddy to buddy "$RECIPIENT_PHONE" of targetService
     send "$MESSAGE" to targetBuddy
-    return "Message sent to $RECIPIENT_PHONE"
+    return "success"
 end tell
 EOF
+)
 
-echo "Done!"
+# Output JSON with status and recipient as a single echo to ensure valid JSON
+echo "{\"status\": \"$RESULT\", \"recipient\": \"$RECIPIENT_PHONE\"}"

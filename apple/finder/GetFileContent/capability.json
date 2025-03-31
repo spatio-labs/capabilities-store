@@ -14,5 +14,12 @@
       "description": "The absolute or relative path to the file."
     }
   ],
-  "output": "json"
+  "output": {
+    "filename": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+  }
 }
