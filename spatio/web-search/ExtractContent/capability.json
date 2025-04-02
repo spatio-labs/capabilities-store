@@ -1,6 +1,6 @@
 {
   "type": "local",
-  "name": "Extract Web Content",
+  "name": "Extract Content",
   "description": "Extracts content from web pages including title, content, and links.",
   "categories": [
     "Web Search"
