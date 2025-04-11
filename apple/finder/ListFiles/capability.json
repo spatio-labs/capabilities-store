@@ -17,7 +17,7 @@
       "name": "directoryPath",
       "type": "string",
       "required": true,
-      "description": "The path to the directory to list files from."
+      "description": "Specify the directory path where you want to list files. You can use '~' to represent your home directory. This uses Mac syntax only."
     }
   ],
   "output": {
