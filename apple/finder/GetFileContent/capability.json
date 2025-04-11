@@ -11,7 +11,7 @@
       "type": "string",
       "required": true,
       "defaultValue": "",
-      "description": "The absolute or relative path to the file."
+      "description": "The absolute path to the file. Must start with '~/' to specify a path from the user's home directory. This uses Mac syntax only."
     }
   ],
   "output": {
