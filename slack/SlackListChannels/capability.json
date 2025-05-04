@@ -1,0 +1,49 @@
+{
+  "type": "local",
+  "name": "Slack List Channels",
+  "description": "Lists all channel-like conversations in a Slack workspace.",
+  "categories": [
+    "Slack"
+  ],
+  "tags": [
+    "Slack", "Channels", "Conversations"
+  ],
+  "entry_point": "slack_cli",
+  "organization": "slack",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "conversations.list",
+      "description": "The Slack API endpoint to call"
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "default": 100,
+      "description": "Maximum number of channels to return (max: 200)"
+    },
+    {
+      "name": "cursor",
+      "type": "string",
+      "required": false,
+      "description": "Pagination cursor for fetching next page of results"
+    },
+    {
+      "name": "types",
+      "type": "string",
+      "required": false,
+      "description": "Filter by conversation type (e.g., public_channel, private_channel)"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "type": "local",
+  "name": "Google Drive Search Files",
+  "description": "Searches for files in Google Drive based on a query string.",
+  "categories": [
+    "Google Drive"
+  ],
+  "tags": [
+    "Google Drive", "Search", "Files"
+  ],
+  "entry_point": "google_drive_cli",
+  "organization": "google",
+  "group": "drive",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "files.list",
+      "description": "The Google Drive API endpoint to call"
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": true,
+      "description": "The search query combining one or more search terms (e.g., 'name contains \"report\"')"
+    },
+    {
+      "name": "fields",
+      "type": "string",
+      "required": false,
+      "default": "files(id,name,mimeType,webViewLink)",
+      "description": "Specifies which fields to include in the response"
+    },
+    {
+      "name": "pageSize",
+      "type": "integer",
+      "required": false,
+      "default": 100,
+      "description": "The maximum number of files to return per page"
+    },
+    {
+      "name": "pageToken",
+      "type": "string",
+      "required": false,
+      "description": "The token for continuing a previous list request on the next page"
+    },
+    {
+      "name": "includeTrash",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Whether to include files in the trash (default: false)"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

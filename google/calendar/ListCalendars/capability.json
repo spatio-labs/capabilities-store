@@ -1,0 +1,61 @@
+{
+  "type": "local",
+  "name": "Google Calendar List Calendars",
+  "description": "Lists all calendars that the user has access to.",
+  "categories": [
+    "Google Calendar"
+  ],
+  "tags": [
+    "Google Calendar", "Calendars", "List"
+  ],
+  "entry_point": "google_calendar_cli",
+  "organization": "google",
+  "group": "calendar",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "calendarList.list",
+      "description": "The Google Calendar API endpoint to call"
+    },
+    {
+      "name": "maxResults",
+      "type": "integer",
+      "required": false,
+      "default": 100,
+      "description": "Maximum number of calendars to return"
+    },
+    {
+      "name": "pageToken",
+      "type": "string",
+      "required": false,
+      "description": "Token for pagination"
+    },
+    {
+      "name": "showDeleted",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Whether to include deleted calendar list entries"
+    },
+    {
+      "name": "showHidden",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Whether to show hidden calendars"
+    }
+  ],
+  "output": {
+    "calendars": {
+      "type": "list",
+      "items": {
+        "type": "object"
+      }
+    },
+    "nextPageToken": {
+      "type": "string"
+    }
+  }
+}

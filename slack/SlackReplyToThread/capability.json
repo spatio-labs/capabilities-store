@@ -1,0 +1,48 @@
+{
+  "type": "local",
+  "name": "Slack Reply To Thread",
+  "description": "Replies to a specific message thread in a Slack channel.",
+  "categories": [
+    "Slack"
+  ],
+  "tags": [
+    "Slack", "Messages", "Threads", "Communication"
+  ],
+  "entry_point": "slack_cli",
+  "organization": "slack",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "chat.postMessage",
+      "description": "The Slack API endpoint to call"
+    },
+    {
+      "name": "channel",
+      "type": "string",
+      "required": true,
+      "description": "The channel containing the thread"
+    },
+    {
+      "name": "thread_ts",
+      "type": "string",
+      "required": true,
+      "description": "Timestamp of the parent message"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "description": "The reply text to send"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

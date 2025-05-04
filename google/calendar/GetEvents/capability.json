@@ -1,0 +1,93 @@
+{
+  "type": "local",
+  "name": "Google Calendar Get Events",
+  "description": "Retrieves events from a specified calendar.",
+  "categories": [
+    "Google Calendar"
+  ],
+  "tags": [
+    "Google Calendar", "Events", "List"
+  ],
+  "entry_point": "google_calendar_cli",
+  "organization": "google",
+  "group": "calendar",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "events.list",
+      "description": "The Google Calendar API endpoint to call"
+    },
+    {
+      "name": "calendarId",
+      "type": "string",
+      "required": true,
+      "default": "primary",
+      "description": "Calendar identifier. To retrieve calendar IDs call the calendarList.list method"
+    },
+    {
+      "name": "timeMin",
+      "type": "string",
+      "required": false,
+      "description": "Lower bound (inclusive) for an event's end time to filter by (RFC3339 timestamp)"
+    },
+    {
+      "name": "timeMax",
+      "type": "string",
+      "required": false,
+      "description": "Upper bound (exclusive) for an event's start time to filter by (RFC3339 timestamp)"
+    },
+    {
+      "name": "maxResults",
+      "type": "integer",
+      "required": false,
+      "default": 250,
+      "description": "Maximum number of events to return"
+    },
+    {
+      "name": "orderBy",
+      "type": "string",
+      "required": false,
+      "default": "startTime",
+      "description": "The order of the events returned (startTime, updated)"
+    },
+    {
+      "name": "q",
+      "type": "string",
+      "required": false,
+      "description": "Free text search terms to find events that match"
+    },
+    {
+      "name": "singleEvents",
+      "type": "boolean",
+      "required": false,
+      "default": true,
+      "description": "Whether to expand recurring events into instances"
+    },
+    {
+      "name": "showDeleted",
+      "type": "boolean",
+      "required": false,
+      "default": false,
+      "description": "Whether to include deleted events"
+    },
+    {
+      "name": "pageToken",
+      "type": "string",
+      "required": false,
+      "description": "Token for pagination"
+    }
+  ],
+  "output": {
+    "events": {
+      "type": "list",
+      "items": {
+        "type": "object"
+      }
+    },
+    "nextPageToken": {
+      "type": "string"
+    }
+  }
+}

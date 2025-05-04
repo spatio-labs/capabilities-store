@@ -17,7 +17,13 @@
       "name": "directoryPath",
       "type": "string",
       "required": true,
-      "description": "Specify the directory path where you want to list files. You can use '~' to represent your home directory. This uses Mac syntax only."
+      "description": "Specify the directory path where you want to list files. You can use '~' to represent your home directory. This uses Mac syntax only.",
+      "context": [
+        "Use the / character when referencing the ROOT directory of the USER's Mac.",
+        "Use the ~ character when referencing the HOME directory of the USER's Mac.",
+        "Common paths for the HOME directory consist of ~/Documents, ~/Downloads, ~/Desktop, ~/Pictures, ~/Movies, ~/Music",
+        "Common paths for the ROOT directory consist of /Users/username/Documents, /Users/username/Downloads, /Users/username/Desktop, /Users/username/Pictures, /Users/username/Movies, /Users/username/Music"
+      ]
     }
   ],
   "output": {

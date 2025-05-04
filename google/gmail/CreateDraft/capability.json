@@ -1,0 +1,71 @@
+{
+  "type": "local",
+  "name": "Gmail Create Draft",
+  "description": "Creates a draft email in the user's Gmail account.",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Draft"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "drafts.create",
+      "description": "The Gmail API endpoint to call"
+    },
+    {
+      "name": "to",
+      "type": "string",
+      "required": true,
+      "description": "Recipient email address(es), comma-separated for multiple recipients"
+    },
+    {
+      "name": "subject",
+      "type": "string",
+      "required": true,
+      "description": "Email subject line"
+    },
+    {
+      "name": "body",
+      "type": "string",
+      "required": true,
+      "description": "Email body content"
+    },
+    {
+      "name": "cc",
+      "type": "string",
+      "required": false,
+      "description": "CC recipient email address(es), comma-separated for multiple recipients"
+    },
+    {
+      "name": "bcc",
+      "type": "string",
+      "required": false,
+      "description": "BCC recipient email address(es), comma-separated for multiple recipients"
+    },
+    {
+      "name": "contentType",
+      "type": "string",
+      "required": false,
+      "default": "text/plain",
+      "description": "Content type of the email body (text/plain or text/html)"
+    },
+    {
+      "name": "attachments",
+      "type": "string",
+      "required": false,
+      "description": "File paths of attachments, comma-separated for multiple files"
+    }
+  ],
+  "output": {
+    "draft": {
+      "type": "object"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "local",
+  "name": "Gmail Send Draft",
+  "description": "Sends an existing draft email from the user's Gmail account.",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Draft", "Send"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "drafts.send",
+      "description": "The Gmail API endpoint to call"
+    },
+    {
+      "name": "draftId",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the draft to send"
+    }
+  ],
+  "output": {
+    "message": {
+      "type": "object"
+    }
+  }
+}

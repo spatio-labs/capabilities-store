@@ -1,0 +1,42 @@
+{
+  "type": "local",
+  "name": "Slack Post Message",
+  "description": "Sends a message to a Slack channel.",
+  "categories": [
+    "Slack"
+  ],
+  "tags": [
+    "Slack", "Messages", "Communication"
+  ],
+  "entry_point": "slack_cli",
+  "organization": "slack",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "chat.postMessage",
+      "description": "The Slack API endpoint to call"
+    },
+    {
+      "name": "channel",
+      "type": "string",
+      "required": true,
+      "description": "ID of the channel to post to"
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "required": true,
+      "description": "The message text to send"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

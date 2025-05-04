@@ -1,0 +1,47 @@
+{
+  "type": "local",
+  "name": "Gmail Get Thread",
+  "description": "Retrieves a full thread with all messages from Gmail.",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Thread"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "threads.get",
+      "description": "The Gmail API endpoint to call"
+    },
+    {
+      "name": "threadId",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the thread to retrieve"
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "required": false,
+      "default": "full",
+      "description": "The format to return the messages in (full, minimal, metadata)"
+    },
+    {
+      "name": "metadataHeaders",
+      "type": "string",
+      "required": false,
+      "description": "When format=metadata, only include headers specified (comma-separated)"
+    }
+  ],
+  "output": {
+    "thread": {
+      "type": "object"
+    }
+  }
+}

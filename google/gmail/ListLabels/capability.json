@@ -1,0 +1,31 @@
+{
+  "type": "local",
+  "name": "Gmail List Labels",
+  "description": "Retrieves a list of all labels in the user's Gmail account.",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Labels"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "labels.list",
+      "description": "The Gmail API endpoint to call"
+    }
+  ],
+  "output": {
+    "labels": {
+      "type": "list",
+      "items": {
+        "type": "object"
+      }
+    }
+  }
+}

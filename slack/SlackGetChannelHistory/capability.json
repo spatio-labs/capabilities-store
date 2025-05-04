@@ -1,0 +1,49 @@
+{
+  "type": "local",
+  "name": "Slack Get Channel History",
+  "description": "Retrieves a portion of messages/events from a Slack channel.",
+  "categories": [
+    "Slack"
+  ],
+  "tags": [
+    "Slack", "Messages", "History", "Channels"
+  ],
+  "entry_point": "slack_cli",
+  "organization": "slack",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "conversations.history",
+      "description": "The Slack API endpoint to call"
+    },
+    {
+      "name": "channel",
+      "type": "string",
+      "required": true,
+      "description": "The channel ID"
+    },
+    {
+      "name": "limit",
+      "type": "integer",
+      "required": false,
+      "default": 100,
+      "description": "Maximum number of messages to return (max: 1000)"
+    },
+    {
+      "name": "cursor",
+      "type": "string",
+      "required": false,
+      "description": "Pagination cursor for fetching next page of results"
+    }
+  ],
+  "output": {
+    "files": {
+      "type": "list",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

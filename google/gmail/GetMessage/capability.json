@@ -1,0 +1,47 @@
+{
+  "type": "local",
+  "name": "Gmail Get Message",
+  "description": "Retrieves the full content of a specific Gmail message.",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Message"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "messages.get",
+      "description": "The Gmail API endpoint to call"
+    },
+    {
+      "name": "messageId",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the message to retrieve"
+    },
+    {
+      "name": "format",
+      "type": "string",
+      "required": false,
+      "default": "full",
+      "description": "The format to return the message in (full, minimal, raw)"
+    },
+    {
+      "name": "metadataHeaders",
+      "type": "string",
+      "required": false,
+      "description": "When format=metadata, only include headers specified (comma-separated)"
+    }
+  ],
+  "output": {
+    "message": {
+      "type": "object"
+    }
+  }
+}

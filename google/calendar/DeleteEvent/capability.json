@@ -1,0 +1,48 @@
+{
+  "type": "local",
+  "name": "Google Calendar Delete Event",
+  "description": "Deletes an event from a specified calendar.",
+  "categories": [
+    "Google Calendar"
+  ],
+  "tags": [
+    "Google Calendar", "Events", "Delete"
+  ],
+  "entry_point": "google_calendar_cli",
+  "organization": "google",
+  "group": "calendar",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "events.delete",
+      "description": "The Google Calendar API endpoint to call"
+    },
+    {
+      "name": "calendarId",
+      "type": "string",
+      "required": true,
+      "default": "primary",
+      "description": "Calendar identifier. To retrieve calendar IDs call the calendarList.list method"
+    },
+    {
+      "name": "eventId",
+      "type": "string",
+      "required": true,
+      "description": "Event identifier"
+    },
+    {
+      "name": "sendUpdates",
+      "type": "string",
+      "required": false,
+      "default": "none",
+      "description": "Whether to send notifications about the deletion of the event (none, all, externalOnly)"
+    }
+  ],
+  "output": {
+    "success": {
+      "type": "boolean"
+    }
+  }
+}

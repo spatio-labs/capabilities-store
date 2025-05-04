@@ -1,0 +1,46 @@
+{
+  "type": "local",
+  "name": "Gmail Modify Message Labels",
+  "description": "Adds or removes labels from a Gmail message (e.g., mark as read/unread, starred).",
+  "categories": [
+    "Gmail"
+  ],
+  "tags": [
+    "Gmail", "Email", "Labels", "Modify"
+  ],
+  "entry_point": "gmail_cli",
+  "organization": "google",
+  "group": "gmail",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "messages.modify",
+      "description": "The Gmail API endpoint to call"
+    },
+    {
+      "name": "messageId",
+      "type": "string",
+      "required": true,
+      "description": "The ID of the message to modify"
+    },
+    {
+      "name": "addLabelIds",
+      "type": "string",
+      "required": false,
+      "description": "Labels to add to the message (comma-separated IDs)"
+    },
+    {
+      "name": "removeLabelIds",
+      "type": "string",
+      "required": false,
+      "description": "Labels to remove from the message (comma-separated IDs)"
+    }
+  ],
+  "output": {
+    "message": {
+      "type": "object"
+    }
+  }
+}

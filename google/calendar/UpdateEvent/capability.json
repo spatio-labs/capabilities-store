@@ -1,0 +1,108 @@
+{
+  "type": "local",
+  "name": "Google Calendar Update Event",
+  "description": "Updates an existing event in a specified calendar.",
+  "categories": [
+    "Google Calendar"
+  ],
+  "tags": [
+    "Google Calendar", "Events", "Update"
+  ],
+  "entry_point": "google_calendar_cli",
+  "organization": "google",
+  "group": "calendar",
+  "inputs": [
+    {
+      "name": "endpoint",
+      "type": "string",
+      "required": true,
+      "default": "events.update",
+      "description": "The Google Calendar API endpoint to call"
+    },
+    {
+      "name": "calendarId",
+      "type": "string",
+      "required": true,
+      "default": "primary",
+      "description": "Calendar identifier. To retrieve calendar IDs call the calendarList.list method"
+    },
+    {
+      "name": "eventId",
+      "type": "string",
+      "required": true,
+      "description": "Event identifier"
+    },
+    {
+      "name": "summary",
+      "type": "string",
+      "required": false,
+      "description": "Title of the event"
+    },
+    {
+      "name": "startDateTime",
+      "type": "string",
+      "required": false,
+      "description": "Start time of the event (RFC3339 timestamp, e.g., '2025-05-01T10:00:00-07:00')"
+    },
+    {
+      "name": "endDateTime",
+      "type": "string",
+      "required": false,
+      "description": "End time of the event (RFC3339 timestamp, e.g., '2025-05-01T11:00:00-07:00')"
+    },
+    {
+      "name": "description",
+      "type": "string",
+      "required": false,
+      "description": "Description of the event"
+    },
+    {
+      "name": "location",
+      "type": "string",
+      "required": false,
+      "description": "Geographic location of the event as free-form text"
+    },
+    {
+      "name": "attendees",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated list of attendee email addresses"
+    },
+    {
+      "name": "colorId",
+      "type": "string",
+      "required": false,
+      "description": "The color of the event. The number corresponds to the colors defined for the user's calendar"
+    },
+    {
+      "name": "sendUpdates",
+      "type": "string",
+      "required": false,
+      "default": "none",
+      "description": "Whether to send notifications about the update of the event (none, all, externalOnly)"
+    },
+    {
+      "name": "transparency",
+      "type": "string",
+      "required": false,
+      "description": "Whether the event blocks time on the calendar (opaque, transparent)"
+    },
+    {
+      "name": "visibility",
+      "type": "string",
+      "required": false,
+      "description": "Visibility of the event (default, public, private, confidential)"
+    },
+    {
+      "name": "reminders",
+      "type": "string",
+      "required": false,
+      "description": "Comma-separated list of reminders in minutes before the event (e.g., '10,30,60')"
+    }
+  ],
+  "output": {
+    "event": {
+      "type": "object"
+    }
+  }
+}
