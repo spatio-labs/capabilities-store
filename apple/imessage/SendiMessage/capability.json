@@ -2,9 +2,17 @@
   "type": "local",
   "name": "Send iMessage",
   "description": "Sends an iMessage to a specified phone number using Apple Messages app.",
+  "categories": [
+    "Communication"
+  ],
+  "tags": [
+    "Messages",
+    "iMessage"
+  ],
   "entry_point": "main.zsh",
   "organization": "apple",
   "group": "imessage",
+  "auth_type": "None",
   "inputs": [
     {
       "name": "recipientPhone",
