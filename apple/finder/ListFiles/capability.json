@@ -10,14 +10,13 @@
     "Files"
   ],
   "entry_point": "main.zsh",
-  "organization": "apple",
-  "group": "finder",
+  "organization": "finder",
   "inputs": [
     {
       "name": "directoryPath",
       "type": "string",
       "required": true,
-      "description": "Specify the directory path where you want to list files. You can use '~' to represent your home directory. This uses Mac syntax only.",
+      "description": "Specify the directory path where you want to list files. You can use '~' to represent your home directory, then use the / character when referencing the ROOT directory of the USER's Mac. Examples: The desktop is directory is ~/Desktop, the documents directory is ~/Documents, the downloads directory is ~/Downloads, the pictures directory is ~/Pictures, the movies directory is ~/Movies, the music directory is ~/Music. This uses Mac syntax only.",
       "context": [
         "Use the / character when referencing the ROOT directory of the USER's Mac.",
         "Use the ~ character when referencing the HOME directory of the USER's Mac.",

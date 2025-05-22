@@ -1,0 +1,12 @@
+{
+    "name": "IPinfo",
+    "description": "IPinfo provides accurate IP address data that helps understand customer actions and detect threats.",
+    "website": "https://ipinfo.io/",
+    "icon": "https://ipinfo.io/static/favicon-32x32.png",
+    "types": ["remote"],
+    "children": ["ip-details"],
+    "auth": {
+        "type": "apiKey",
+        "env_variable": "IPINFO_API_TOKEN"
+    }
+}

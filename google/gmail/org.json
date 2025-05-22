@@ -1,0 +1,14 @@
+{
+  "name": "Gmail",
+  "description": "Access and manage your Gmail messages and threads",
+  "types": ["remote"],
+  "parent": "google",
+  "auth": {
+    "type": "oauth2",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly",
+      "https://www.googleapis.com/auth/gmail.send",
+      "https://www.googleapis.com/auth/gmail.modify"
+    ]
+  }
+} 

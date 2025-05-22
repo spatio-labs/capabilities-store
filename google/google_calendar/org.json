@@ -1,0 +1,14 @@
+{
+  "name": "Google Calendar",
+  "description": "Access and manage your Google Calendar events",
+  "types": ["remote"],
+  "parent": "google",
+  "auth": {
+    "type": "oauth2",
+    "scopes": [
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/calendar.events",
+      "https://www.googleapis.com/auth/calendar"
+    ]
+  }
+} 

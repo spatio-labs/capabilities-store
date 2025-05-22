@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Gmail Send Draft",
   "description": "Sends an existing draft email from the user's Gmail account.",
   "categories": [
@@ -8,17 +8,14 @@
   "tags": [
     "Gmail", "Email", "Draft", "Send"
   ],
-  "entry_point": "gmail_cli",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
   "organization": "google",
   "group": "gmail",
   "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "drafts.send",
-      "description": "The Gmail API endpoint to call"
-    },
     {
       "name": "draftId",
       "type": "string",

@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Gmail Create Draft",
   "description": "Creates a draft email in the user's Gmail account.",
   "categories": [
@@ -8,17 +8,14 @@
   "tags": [
     "Gmail", "Email", "Draft"
   ],
-  "entry_point": "gmail_cli",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
   "organization": "google",
   "group": "gmail",
   "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "drafts.create",
-      "description": "The Gmail API endpoint to call"
-    },
     {
       "name": "to",
       "type": "string",

@@ -1,0 +1,6 @@
+{
+    "name": "Spatio",
+    "description": "Spatio Labs internal capabilities",
+    "types": ["local", "remote"],
+    "children": ["web-search"]
+}

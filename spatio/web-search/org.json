@@ -1,0 +1,6 @@
+{
+  "name": "Web Search",
+  "description": "Capabilities for searching and extracting content from the web",
+  "types": ["remote"],
+  "parent": "spatio"
+} 

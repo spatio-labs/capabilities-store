@@ -10,8 +10,7 @@
     "iMessage"
   ],
   "entry_point": "main.zsh",
-  "organization": "apple",
-  "group": "imessage",
+  "organization": "imessage",
   "auth_type": "None",
   "inputs": [
     {

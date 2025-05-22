@@ -1,5 +1,6 @@
 {
-    "name": "apple",
+    "name": "Apple",
     "description": "An Apple organization created by Spatio Labs.",
-    "types": ["local"]
+    "types": ["local"],
+    "children": ["finder", "imessage"]
 }

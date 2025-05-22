@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Google Drive Search Files",
   "description": "Searches for files in Google Drive based on a query string.",
   "categories": [
@@ -8,17 +8,14 @@
   "tags": [
     "Google Drive", "Search", "Files"
   ],
-  "entry_point": "google_drive_cli",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
   "organization": "google",
-  "group": "drive",
+  "group": "google_drive",
   "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "files.list",
-      "description": "The Google Drive API endpoint to call"
-    },
     {
       "name": "q",
       "type": "string",
@@ -57,8 +54,11 @@
     "files": {
       "type": "list",
       "items": {
-        "type": "string"
+        "type": "object"
       }
+    },
+    "nextPageToken": {
+      "type": "string"
     }
   }
 }

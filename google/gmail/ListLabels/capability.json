@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Gmail List Labels",
   "description": "Retrieves a list of all labels in the user's Gmail account.",
   "categories": [
@@ -8,18 +8,14 @@
   "tags": [
     "Gmail", "Email", "Labels"
   ],
-  "entry_point": "gmail_cli",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
   "organization": "google",
   "group": "gmail",
-  "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "labels.list",
-      "description": "The Gmail API endpoint to call"
-    }
-  ],
+  "inputs": [],
   "output": {
     "labels": {
       "type": "list",

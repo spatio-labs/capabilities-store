@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Gmail List Messages",
   "description": "Lists messages in the user's Gmail mailbox with optional search query.",
   "categories": [
@@ -8,17 +8,13 @@
   "tags": [
     "Gmail", "Email", "Search", "Messages"
   ],
-  "entry_point": "gmail_cli",
-  "organization": "google",
-  "group": "gmail",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
+  "organization": "gmail",
   "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "messages.list",
-      "description": "The Gmail API endpoint to call"
-    },
     {
       "name": "q",
       "type": "string",

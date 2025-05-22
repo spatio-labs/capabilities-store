@@ -1,6 +1,0 @@
-{
-  "name": "Finder",
-  "description": "A group that encapsulates all things Finder",
-  "organization": "apple",
-  "types": ["local"]
-}

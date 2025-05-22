@@ -1,5 +1,5 @@
 {
-  "type": "local",
+  "type": "remote",
   "name": "Google Calendar Update Event",
   "description": "Updates an existing event in a specified calendar.",
   "categories": [
@@ -8,17 +8,14 @@
   "tags": [
     "Google Calendar", "Events", "Update"
   ],
-  "entry_point": "google_calendar_cli",
+  "entry_point": "main",
+  "auth": {
+    "type": "oauth2",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
   "organization": "google",
-  "group": "calendar",
+  "group": "google_calendar",
   "inputs": [
-    {
-      "name": "endpoint",
-      "type": "string",
-      "required": true,
-      "default": "events.update",
-      "description": "The Google Calendar API endpoint to call"
-    },
     {
       "name": "calendarId",
       "type": "string",

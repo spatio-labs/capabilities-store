@@ -3,8 +3,7 @@
   "name": "Get File Content",
   "description": "A capability that retrieves the content of a specified file.",
   "entry_point": "main.zsh",
-  "organization": "apple",
-  "group": "finder",
+  "organization": "finder",
   "inputs": [
     {
       "name": "filePath",

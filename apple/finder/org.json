@@ -1,0 +1,6 @@
+{
+  "name": "Finder",
+  "description": "Apple Finder capabilities for file system operations",
+  "types": ["local"],
+  "parent": "apple"
+} 

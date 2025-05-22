@@ -1,0 +1,14 @@
+{
+  "name": "Google Drive",
+  "description": "Access and manage your Google Drive files and folders",
+  "types": ["remote"],
+  "parent": "google",
+  "auth": {
+    "type": "oauth2",
+    "scopes": [
+      "https://www.googleapis.com/auth/drive.readonly",
+      "https://www.googleapis.com/auth/drive.file",
+      "https://www.googleapis.com/auth/drive"
+    ]
+  }
+} 

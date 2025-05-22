@@ -1,0 +1,12 @@
+{
+  "name": "Google",
+  "description": "Google API capabilities and services",
+  "types": ["remote"],
+  "auth": {
+    "type": "oauth2",
+    "auth_url": "https://accounts.google.com/o/oauth2/auth",
+    "token_url": "https://oauth2.googleapis.com/token",
+    "env_variable": "GOOGLE_AUTH_TOKEN"
+  },
+  "children": ["gmail", "google_calendar", "google_drive"]
+} 

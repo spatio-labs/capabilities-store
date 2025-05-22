@@ -1,0 +1,11 @@
+{
+    "name": "Slack",
+    "description": "Slack API capabilities for team communication and collaboration",
+    "types": ["remote"],
+    "auth": {
+        "type": "oauth2",
+        "auth_url": "https://slack.com/oauth/authorize",
+        "token_url": "https://slack.com/api/oauth.access",
+        "env_variable": "SLACK_AUTH_TOKEN"
+    }
+}

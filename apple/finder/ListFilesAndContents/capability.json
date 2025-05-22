@@ -3,8 +3,7 @@
   "name": "List Files and Contents",
   "description": "Lists all files in a directory along with their contents.",
   "entry_point": "main.zsh",
-  "organization": "apple",
-  "group": "finder",
+  "organization": "finder",
   "inputs": [
     {
       "name": "directoryPath",

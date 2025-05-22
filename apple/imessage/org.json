@@ -1,0 +1,6 @@
+{
+  "name": "iMessage",
+  "description": "Apple iMessage capabilities for messaging operations",
+  "types": ["local"],
+  "parent": "apple"
+} 

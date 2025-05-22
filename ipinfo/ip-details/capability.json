@@ -1,0 +1,37 @@
+{
+    "type": "remote",
+    "name": "IP Details",
+    "description": "Get detailed information about an IP address including geolocation, organization, and more",
+    "categories": [
+        "Network"
+    ],
+    "tags": [
+        "IPinfo", "Geolocation", "IP"
+    ],
+    "entry_point": "main",
+    "auth": {
+        "type": "apiKey",
+        "env_variable": "IPINFO_API_TOKEN"
+    },
+    "organization": "ipinfo",
+    "group": "ip-details",
+    "inputs": [
+        {
+            "name": "ip",
+            "type": "string",
+            "required": true,
+            "description": "The IP address to lookup (IPv4 or IPv6)"
+        },
+        {
+            "name": "token",
+            "type": "string",
+            "required": true,
+            "description": "IPinfo API token"
+        }
+    ],
+    "output": {
+        "ipDetails": {
+            "type": "object"
+        }
+    }
+} 

@@ -1,0 +1,6 @@
+{
+  "name": "IP Details",
+  "description": "Get detailed information about IP addresses",
+  "types": ["remote"],
+  "parent": "ipinfo"
+} 
