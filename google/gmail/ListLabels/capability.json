@@ -2,6 +2,7 @@
   "type": "remote",
   "name": "Gmail List Labels",
   "description": "Retrieves a list of all labels in the user's Gmail account.",
+  "organization": "gmail",
   "categories": [
     "Gmail"
   ],
@@ -11,10 +12,14 @@
   "entry_point": "main",
   "auth": {
     "type": "oauth2",
+    "auth_url": "https://accounts.google.com/o/oauth2/auth",
+    "token_url": "https://oauth2.googleapis.com/token",
+    "client_id": "565753126849-2pel9f115jm01ifqml5kmmktrl731k05.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/gmail.readonly"
+    ],
     "env_variable": "GOOGLE_AUTH_TOKEN"
   },
-  "organization": "google",
-  "group": "gmail",
   "inputs": [],
   "output": {
     "labels": {

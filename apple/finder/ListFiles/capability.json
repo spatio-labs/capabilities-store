@@ -1,6 +1,7 @@
 {
   "type": "local",
   "name": "List Files",
+  "logo": "https://capability-assets.spatiolabs.org/apple-finder.svg",
   "description": "Lists all files in a given directory.",
   "categories": [
     "File System"

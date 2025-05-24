@@ -1,6 +1,7 @@
 {
   "type": "local",
   "name": "List Files and Contents",
+  "logo": "https://capability-assets.spatiolabs.org/apple-finder.svg",
   "description": "Lists all files in a directory along with their contents.",
   "entry_point": "main.zsh",
   "organization": "finder",

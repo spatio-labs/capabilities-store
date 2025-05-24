@@ -5,10 +5,14 @@
   "parent": "google",
   "auth": {
     "type": "oauth2",
+    "auth_url": "https://accounts.google.com/o/oauth2/auth",
+    "token_url": "https://oauth2.googleapis.com/token",
+    "client_id": "565753126849-2pel9f115jm01ifqml5kmmktrl731k05.apps.googleusercontent.com",
     "scopes": [
       "https://www.googleapis.com/auth/gmail.readonly",
       "https://www.googleapis.com/auth/gmail.send",
       "https://www.googleapis.com/auth/gmail.modify"
-    ]
+    ],
+    "env_variable": "GOOGLE_AUTH_TOKEN"
   }
-} 
+}

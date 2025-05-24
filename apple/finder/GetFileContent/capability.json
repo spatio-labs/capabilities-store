@@ -1,6 +1,7 @@
 {
   "type": "local",
   "name": "Get File Content",
+  "logo": "https://capability-assets.spatiolabs.org/apple-finder.svg",
   "description": "A capability that retrieves the content of a specified file.",
   "entry_point": "main.zsh",
   "organization": "finder",

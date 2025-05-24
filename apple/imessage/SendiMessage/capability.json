@@ -1,6 +1,7 @@
 {
   "type": "local",
   "name": "Send iMessage",
+  "logo": "https://capability-assets.spatiolabs.org/apple-imessage.svg",
   "description": "Sends an iMessage to a specified phone number using Apple Messages app.",
   "categories": [
     "Communication"
